@@ -2,10 +2,6 @@ import React, { Children } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-type HeaderProps = {
-  children: React.ReactNode;
-};
-
 function Header({ children }: HeaderProps) {
   return (
     <div>
