@@ -1,5 +1,6 @@
 import { Editor } from "@/components/editor/Editor";
 import Header from "@/components/Header";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import React from "react";
 
 function Document() {
@@ -9,6 +10,12 @@ function Document() {
         <div className="flex w-fit items-center justify-center gap-2">
           <p className=" document-title">fake doc title</p>
         </div>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </Header>
       <Editor />
     </div>
