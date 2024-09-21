@@ -8,7 +8,7 @@ function Document() {
     <div>
       <Header>
         <div className="flex w-fit items-center justify-center gap-2">
-          <p className=" document-title">fake doc title</p>
+          <p className=" document-title">share</p>
         </div>
         <SignedOut>
           <SignInButton />

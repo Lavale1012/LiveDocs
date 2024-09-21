@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Header({ children }: HeaderProps) {
   return (
-    <div>
+    <div className="flex p-3 gap-2">
       <Link href="/" className=" md:flex-1">
         <Image
           src="/assets/icons/logo.svg"
