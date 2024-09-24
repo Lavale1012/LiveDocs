@@ -4,7 +4,11 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import React from "react";
 
 function Document() {
-  return <div></div>;
+  return (
+    <div>
+      <Editor />
+    </div>
+  );
 }
 
 export default Document;
