@@ -4,7 +4,7 @@ import React from "react";
 function SignInPage() {
   return (
     <main className=" auth-page">
-      <SignIn />
+      <SignIn routing="hash" />
     </main>
   );
 }

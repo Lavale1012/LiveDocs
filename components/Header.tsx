@@ -1,10 +1,11 @@
 import React, { Children } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-function Header({ children }: HeaderProps) {
+function Header({ children, className }: HeaderProps) {
   return (
-    <div className="flex p-3 gap-2">
+    <div className={cn("header", className)}>
       <Link href="/" className=" md:flex-1">
         <Image
           src="/assets/icons/logo.svg"
