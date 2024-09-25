@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     // Return a redirect response
     redirect("/sign-in");
 
-  const { id, firstName, lastName, emailAddresses, imageUrl } = clerkUser!;
+  const { id, firstName, lastName, emailAddresses, imageUrl } = clerkUser;
   const user = {
     id,
     info: {

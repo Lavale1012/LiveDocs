@@ -6,7 +6,7 @@ import AddDocumentBtn from "@/components/AddDocumentBtn";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 const Home = async () => {
-  const clerkUser = await currentUser;
+  const clerkUser = await currentUser();
   if (!clerkUser) redirect("/sign-in");
   const documents = [];
   return (
@@ -29,7 +29,10 @@ const Home = async () => {
             width={40}
             height={40}
           />
-          <AddDocumentBtn />
+          <AddDocumentBtn
+            userId={clerkUser.id}
+            email={clerkUser.emailAddresses[0].emailAddress}
+          />
         </div>
       )}
     </main>
