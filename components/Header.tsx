@@ -2,6 +2,8 @@ import React, { Children } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { FiSun } from "react-icons/fi";
 
 function Header({ children, className }: HeaderProps) {
   return (
@@ -22,6 +24,9 @@ function Header({ children, className }: HeaderProps) {
           className="mr-2 md:hidden"
         />
       </Link>
+      <Button className=" rounded-full">
+        <FiSun />
+      </Button>
       {children}
     </div>
   );

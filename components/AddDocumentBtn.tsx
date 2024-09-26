@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { createDocument } from "@/lib/actions/room.action";
+import { createDocument } from "@/lib/actions/room.actions";
 import { useRouter } from "next/navigation";
 
 function AddDocumentBtn({ userId, email }: AddDocumentBtnProps) {
