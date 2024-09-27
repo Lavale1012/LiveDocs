@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { updateDocument } from "@/lib/actions/room.actions";
 import Image from "next/image";
+import Loader from "./Loader";
 
 interface RoomMetadata {
   title: string;
@@ -63,7 +64,7 @@ function CollabRoom({ roomId, roomMetadata }: CollaborativeRoomProps) {
 
   return (
     <RoomProvider id={roomId}>
-      <ClientSideSuspense fallback={<div>Loading…</div>}>
+      <ClientSideSuspense fallback={<Loader />}>
         <div className="collaborative-room">
           <Header>
             <div
