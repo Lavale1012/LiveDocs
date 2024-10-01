@@ -8,6 +8,7 @@ import { getDocuments } from "@/lib/actions/room.actions";
 import Link from "next/link";
 import Image from "next/image";
 import { dateConverter } from "@/lib/utils";
+import { LiveblocksProvider } from "@liveblocks/react/suspense";
 const Home = async () => {
   const clerkUser = await currentUser();
   if (!clerkUser) redirect("/sign-in");
